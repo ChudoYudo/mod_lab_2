@@ -64,9 +64,8 @@ def period(seed,A,M):
     aper=i3+per
     print('Period: '+str(per))
     print('interval: '+str(aper))
-def ravnom_ras(a,b,rand_bas):
-    ret=a + rand_bas * (b - a) /15
-    ret=float('{:.3f}'.format(ret))
+def ravnom_ras(a,b):
+    ret=a + random.random() * (b - a)
     return ret
 
 def expon(R,lam):
@@ -83,3 +82,14 @@ def simps(a,b):
     y=ravnom_ras(a/2,b/2,get_rand(a,b))
     z=ravnom_ras(a/2,b/2,get_rand(a,b))
     return y+z
+
+def gaus (n,m,q):
+    Rs=0
+    for i in range(n):
+        Rs=Rs+get_rand(3,9)
+    return m+q*math.sqrt(12/n)*Rs -n/2
+def gamma (lam,hi):
+    temp=1
+    for i in range(hi):
+        temp=temp*random.random()
+    return (-1)*math.log(temp)/lam
