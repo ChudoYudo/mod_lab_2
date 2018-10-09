@@ -33,8 +33,19 @@ seeed = seed
 
 
 
+# for i in range(N):
+#     seed = functions.treug(a,b)
+#     R.append(seed)
+#     print('R' + str(i) + ':' + str(seed) + '   X' + str(i) + ':' + str(seed / M))
+#
+#
+# plt.hist(R, bins=25, alpha=0.6, color='g')
+# plt.show()
+
+
+
 for i in range(N):
-    seed = functions.treug(a,b)
+    seed = functions.simps(a,b)
     R.append(seed)
     print('R' + str(i) + ':' + str(seed) + '   X' + str(i) + ':' + str(seed / M))
 

@@ -78,3 +78,8 @@ def treug(a,b):
     R2=get_rand(a,b)
     x=a+(b-a)*max(R1,R2)
     return x
+
+def simps(a,b):
+    y=ravnom_ras(a/2,b/2,get_rand(a,b))
+    z=ravnom_ras(a/2,b/2,get_rand(a,b))
+    return y+z
