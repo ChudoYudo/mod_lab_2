@@ -68,26 +68,26 @@ def ravnom_ras(a,b):
     ret=a + random.random() * (b - a)
     return ret
 
-def expon(R,lam):
-    return (-1)*(1/lam)*math.log(R)
+def expon(lam):
+    return (-1)*math.log(random.random())/lam
 
 
 def treug(a,b):
-    R1=get_rand(a,b)
-    R2=get_rand(a,b)
+    R1=random.random()
+    R2=random.random()
     x=a+(b-a)*max(R1,R2)
     return x
 
 def simps(a,b):
-    y=ravnom_ras(a/2,b/2,get_rand(a,b))
-    z=ravnom_ras(a/2,b/2,get_rand(a,b))
+    y=ravnom_ras(a/2,b/2)
+    z=ravnom_ras(a/2,b/2)
     return y+z
 
 def gaus (n,m,q):
     Rs=0
     for i in range(n):
-        Rs=Rs+get_rand(3,9)
-    return m+q*math.sqrt(12/n)*Rs -n/2
+        Rs=Rs+random.random()
+    return m+q*math.sqrt(12/n)*(Rs -n/2)
 def gamma (lam,hi):
     temp=1
     for i in range(hi):
