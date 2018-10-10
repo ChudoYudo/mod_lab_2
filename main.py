@@ -1,6 +1,4 @@
 import functions
-import numpy as np
-import scipy.stats as stats
 import matplotlib.pyplot as plt
 N = 10000
 R = []
@@ -98,19 +96,19 @@ R = []
 
 #-------------------------------------------------------------------------------------------------------------
 #Гамма распределение
-# hi=18
-# lam=2.5
-# for i in range(N):
-#     seed = functions.gamma(lam, hi)
-#     R.append(seed)
-#     print('R' + str(i) + ':' + str(seed))
-# plt.hist(R, bins=25, alpha=0.6, color='g')
-# plt.show()
-# Mx=functions.M_colcuate(R)
-# Dx=functions.D_colculate(R)
-# Sk=functions.sko_colculate(R)
-# print('Mx: '+str(Mx)+' Dx: '+str(Dx)+' Sko: '+str(Sk))
-#
+hi=18
+lam=2.5
+for i in range(N):
+    seed = functions.gamma(lam, hi)
+    R.append(seed)
+    print('R' + str(i) + ':' + str(seed))
+plt.hist(R, bins=25, alpha=0.6, color='g')
+plt.show()
+Mx=functions.M_colcuate(R)
+Dx=functions.D_colculate(R)
+Sk=functions.sko_colculate(R)
+print('Mx: '+str(Mx)+' Dx: '+str(Dx)+' Sko: '+str(Sk))
+
 
 
 # functions.show_plt(R)
