@@ -12,6 +12,7 @@ def D_colculate(Arr):
     # return d*(len(r)/(len(r)-1))
 def sko_colculate(Arr):
     D=D_colculate(Arr)
+    a=0
     return math.sqrt(D)
 
 def check_ravn(Arr):
